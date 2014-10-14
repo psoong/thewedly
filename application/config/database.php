@@ -92,8 +92,8 @@ $db['development']['autoinit'] = TRUE;
 $db['development']['stricton'] = FALSE;
 
 $db['test']['hostname'] = 'localhost';
-$db['test']['username'] = 'root';
-$db['test']['password'] = '';
+$db['test']['username'] = 'wedly';
+$db['test']['password'] = 'sldjkfhaslkjhasdlksajdhajksdh1293123salkdjh!@#$@';
 $db['test']['database'] = 'weddingi_new';
 $db['test']['dbdriver'] = 'mysql';
 $db['test']['dbprefix'] = '';
