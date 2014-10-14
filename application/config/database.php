@@ -49,7 +49,7 @@ switch($_SERVER['HTTP_HOST']){
         $active_group = 'live';
     break;
     case "test.thewedly.com":
-    case "test.turno.co.nz":
+    case "wedly.turno.co.nz":
         $active_group = 'test';
     break;
     default:
