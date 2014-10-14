@@ -1,0 +1,133 @@
+@CHARSET "UTF-8";
+
+.sbHolder{
+	font-family: 'roboto_slabregular';
+	font-size: 14px;
+	font-weight: normal;
+	height: 24px;
+	position: relative;
+	width: 276px;
+	background:#EEEEEE;
+    border: 1px solid #CCCCCC;
+	float: left;
+	/*background: rgba(254,254,254,1);
+background: -moz-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(219,219,219,1) 54%, rgba(226,226,226,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(254,254,254,1)), color-stop(54%, rgba(219,219,219,1)), color-stop(100%, rgba(226,226,226,1)));
+background: -webkit-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(219,219,219,1) 54%, rgba(226,226,226,1) 100%);
+background: -o-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(219,219,219,1) 54%, rgba(226,226,226,1) 100%);
+background: -ms-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(219,219,219,1) 54%, rgba(226,226,226,1) 100%);
+background: linear-gradient(to bottom, rgba(254,254,254,1) 0%, rgba(219,219,219,1) 54%, rgba(226,226,226,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e2e2e2', GradientType=0 );*/
+	  border-radius: 4px;
+	   box-shadow: 0 0 5px #D3D3D3 inset;
+text-align:left;	
+}
+.sbHolder:focus .sbSelector{
+	
+}
+.sbSelector{
+	font-family: 'roboto_slabregular';
+	font-size:14px;
+	display: block;
+	height: 24px;
+	left: 0;
+	line-height: 24px;
+	outline: none!important;
+	overflow: hidden;
+	position: absolute;
+	text-indent: 7px;
+	top:-1px;
+	width:100%;
+}
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover{
+  	color: #353535;
+    font-family: 'source_sans_proregular';
+    font-size: 14px;
+    outline: medium none;
+    text-decoration: none;
+}
+.sbToggle{
+	background: url(../../images/select-icons.png) 7px 7px no-repeat;
+	display: block;
+	height: 30px;
+	outline: none;
+	position: absolute;
+	right: 0;
+	top:-1px;
+	width: 30px;
+}
+/* .sbToggle:hover{
+	background: url(../images/select-icons.png) #EBEBEB 7px 7px no-repeat;
+}
+.sbToggleOpen{
+	background: url(../images/select-icons.png) #EBEBEB 0 -16px no-repeat;
+}
+.sbToggleOpen:hover{
+	background: url(../images/select-icons.png) #EBEBEB 0 -66px no-repeat;
+} */
+.sbHolderDisabled{
+	background-color: #3C3C3C;
+	border: solid 1px #515151;
+}
+.sbHolderDisabled .sbHolder{
+	
+}
+.sbHolderDisabled .sbToggle{
+	
+}
+.sbOptions{
+	background-color: #fff;
+	border-left:solid 1px #ccc;
+	border-right:solid 1px #ccc;
+	border-bottom:solid 1px #ccc;
+	list-style: none;
+	left: -1px;
+	font-size:16px;
+	font-family: 'roboto_slabregular';
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 30px;
+	width: 276px;
+	z-index: 1;
+	overflow-y: auto;
+}
+.sbOptions li{
+	padding: 0 4px;
+	font-size:14px; 
+}
+.sbOptions a{
+    display: block;
+	outline: none;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions a:link, .sbOptions a:visited{
+   	color: #353535;
+    font-family: 'source_sans_proregular';
+    font-size: 13px;
+    text-decoration: none;
+}
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus{
+
+}
+.sbOptions li.last a{
+	border-bottom: none;
+}
+.sbOptions .sbDisabled{
+	border-bottom: dotted 1px #515151;
+	color: #999;
+	display: block;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions .sbGroup{
+	border-bottom: dotted 1px #515151;
+	color: #EBB52D;
+	display: block;
+	font-weight: bold;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions .sbSub{
+	padding-left: 17px;
+}

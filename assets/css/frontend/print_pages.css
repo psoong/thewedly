@@ -1,0 +1,23 @@
+.outer_budget_div{
+display:none;
+}
+.menu_bottm_div{
+display:none;
+}
+.sngl_tr{
+display:none;
+}
+.log_show_div{
+display:none;
+}
+.rights_menu{
+display:none;
+}
+.print_del{
+display:none;
+}
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+}

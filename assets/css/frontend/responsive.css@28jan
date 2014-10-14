@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+@media (max-width:1024px) {
+.regist_outer{width:51%;}
+.social_btn_block{margin-left:11.5%;}
+.center_block_planner{width:100%;}
+.planner_part_outer{width:100%;}
+}
+@media (max-width:1000px) {
+.header_main{display:block;}
+.logo_size{display:block; }
+#social_mediamain{display:none;}
+#bottom_container{top:59px;}
+.center_part_outer{width:100%;}
+.regist_outer{width:50%;}
+.memberrship_outer{width:94%;}
+.vendor_reg_outer{width:94%;}
+.ct_main{top:13px;}
+.tc_main{top:13px;}
+.cnt_main{top:13px;}
+.ab_main{top:13px;}
+.pp_main{top:13px;}
+.mobile_searchs_area{width:72.6%;}
+.bottoms_navs_head{display:block;}
+.header_show{display:none;}
+.search_menu{right:-10px !important;}
+.btn_search{right:-10px !important;}
+.nttexts{width:65px;}
+.hide_shows{right:0; left: auto !important;}
+.tip_container{width:454px !important;}
+}
+
+
+@media (max-width:768px) {
+
+.header_main{display:block;}
+.logo_size{display:block;}
+.center_part_outer{width:100%;}
+.regist_outer{width:55%;}
+.social_btn_block{margin-left:10.5%;}
+#pins_popup .regist_pop_login_block{bottom: 0; position: fixed; width: auto !important; right:28%;}
+.mobile_searchs_area{width:65%;}
+
+
+}
+
+@media (max-width:676px) {
+.regist_outer{width:57%;}
+.social_btn_block{margin-left: 7.5%;}
+.mobile_searchs_area{width:64%;}
+
+}
+
+@media (max-width:600px) {
+.regist_outer{width:51%;}
+.regist_outer input[type="text"]{width:285px;}
+.regist_outer input[type="password"]{width:285px;}
+.regist_row_div .sbHolder{width:229px !important;}
+#pins_popup .regist_pop_login_block{bottom: 0; position: fixed; width: auto !important; right:25%;}
+.mobile_searchs_area{width:54.4%;}
+}
+
+@media (max-width:568px) {
+.mobile_searchs_area{width:52%;}
+.regist_outer{width: 52%;}
+.social_btn_block{margin-left: 5.5%;}
+#pins_popup .regist_pop_login_block{bottom: 0; position: fixed; width: auto !important; right:24%;}
+.mobile_searchs_area{width:52%;}
+}
+
+@media (max-width:480px) {
+.mobile_searchs_area{width:50%;}
+.mobile_searchs_area{width:49%;}
+
+}
+

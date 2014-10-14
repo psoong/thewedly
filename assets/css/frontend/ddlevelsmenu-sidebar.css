@@ -1,0 +1,51 @@
+/* ######### Marker List Vertical Menu ######### */
+
+.markermenu{
+width: 199px; /*width of side bar menu*/
+clear: left;
+position: relative; /*Preserve this for "right" arrow images (added by script) to be positioned correctly*/
+
+}
+
+.markermenu ul{
+list-style-type: none;
+margin: 0px 0;
+padding: 0;
+border: 1px solid #e4e4e4;
+}
+
+.markermenu ul li a{
+background: #fff; /*light gray background*/
+font-family: 'proxima_novalight';
+color: #000;
+display: block;
+width: auto;
+padding: 4px 0;
+padding-left: 10px;
+text-decoration: none;
+font-size:14px; 
+}
+
+* html .markermenu ul li a{ /*IE6 hack*/
+width: 155px;
+}
+
+.markermenu ul li a:visited, .markermenu ul li a:active{
+color: #00014e;
+}
+
+.markermenu ul li a:hover, .markermenu ul li a.selected{
+color: white;
+background-color: #444;
+}
+
+/* ######### Customized Drop Down ULs CSS (inherits from ddlevelsmenu-base.css) ######### */
+
+.blackwhite li a{
+background: white;
+}
+
+.blackwhite li a:hover{
+background: black;
+color: white;
+}

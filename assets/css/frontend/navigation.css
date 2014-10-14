@@ -1,0 +1,147 @@
+
+.sf-menu {
+	line-height: 1.0;
+}
+
+.sf-menu ul {
+	position: absolute;
+	top: -999em;
+	width: 10em;
+}
+
+.sf-menu ul li {
+	width: 100%;
+}
+
+.sf-menu li:hover {
+	visibility: inherit;
+}
+
+.sf-menu li {
+	display: inline-block;
+	position: relative;
+	text-align: left;
+}
+
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+
+
+nav.main-menu {
+	
+	font-size: 18px;
+	font-weight: 300;
+	position:relative;
+	top:16px;  
+}
+
+nav.main-menu .logo {
+	margin: 0 20px;
+	
+}
+
+nav.main-menu .logo:after {
+	border: 0;
+}
+
+nav.main-menu>ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+nav.main-menu>ul:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+nav.main-menu>ul>li {
+	margin: 0;
+	padding: 0;
+	display: block;
+	line-height: 25px;
+	padding: 4px 15px;
+	display: inline-block;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+nav.main-menu>ul>li:before {
+	display: block;
+	content: '';
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid rgba(0, 0, 0, 0.05);
+	position: absolute;
+	top: 0;
+	left:48%;
+	-webkit-transition: .3s border-color linear, .3s top linear;
+	-moz-transition: .3s border-color linear, .3s top linear;
+	-o-transition: .3s border-color linear, .3s top linear;
+	-ms-transition: .3s border-color linear, .3s top linear;
+	transition: .3s border-color linear, .3s top linear;
+}
+
+nav.main-menu>ul>li:after {
+	content: "";
+	display: block;
+	height: 3px;
+	left: auto;
+	right: 0;
+	margin-top: -1px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+nav.main-menu>ul>li.selected:before,nav.main-menu>ul>li.active:before {
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #e1842d;
+	position: absolute;
+	left:36%;
+	top: 0;
+}
+
+nav.main-menu>ul.sf-menu li:hover:before,nav.main-menu>ul.sf-menu li.sfHover:before
+	{
+	border-top-color: #e1842d;
+	top: -5px;
+}
+
+nav.main-menu>ul>li:last-child:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+nav.main-menu>ul>li>a {
+	padding: 0;
+	color: inherit;
+	text-transform:uppercase; 
+}
+
+nav.main-menu>ul>li.selected {
+	padding-left: 10px;
+}
+
+nav.main-menu>ul>li.selected a {
+	line-height: 25px;
+}
+
+
+
+
+
+
+
