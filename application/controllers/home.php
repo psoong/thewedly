@@ -1,6 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Home extends CI_Controller {
+    
+        function __construct() { 
+            // Call the constructor 
+            parent::__construct();
+        }
 
 	public function index()
 	{
@@ -12,5 +17,7 @@ class Home extends CI_Controller {
             $this->load->view('home',$data);
             $this->load->view('templates/footer',$data);
 	}
+        
 }
 
+?>

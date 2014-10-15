@@ -41,6 +41,8 @@
 $route['default_controller'] = "home";
 $route['404_override'] = '';
 
+## AJAX ROUTES ##
+$route['load_portfolio/(:num)'] = "ajax/load_browse/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
