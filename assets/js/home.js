@@ -1,6 +1,6 @@
 window.fbAsyncInit = function() {
   FB.init({
-    appId      : '646723425446738',
+    appId      : '646730485446032',
     xfbml      : true,
     status     : true,
     version    : 'v2.1'
@@ -192,9 +192,13 @@ $(document).ready(function(){
             } 
     });
     $('#fbsharebutton_img').click(function(){
+           var sharing = $(this).attr("rel");
            FB.ui({
-            method: 'share',
-            href: 'https://developers.facebook.com/docs/',
+            method: 'share_open_graph',
+            action_type: 'og.likes',
+            action_properties: JSON.stringify({
+                object: sharing,
+            })
           }, function(response){ console.log(response); });
     });
     function facebook_count_share(){ console.log("here"); }
