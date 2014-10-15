@@ -1,10 +1,4 @@
 <div id="bottom_container">
-    <div
-        class="fb-like"
-        data-share="true"
-        data-width="450"
-        data-show-faces="true">
-      </div>
     <div class="pin_bodi toggle toggle_margin_top" accesskey="">
         <div id="board_main">
             <?php if($portfolio->num_rows()): ?>
