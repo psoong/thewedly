@@ -191,7 +191,7 @@ $(document).ready(function(){
                 }
             } 
     });
-    $('#fbsharebutton_img').click(function(){
+    $('img[class=fbsharebutton]').click(function(){
            var sharing = $(this).attr("rel");
            FB.ui({
             method: 'share_open_graph',
