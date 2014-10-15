@@ -146,7 +146,6 @@ $(document).ready(function(){
         itemSelector : '.element',
         layoutMode : 'masonry'
     });
-    
     function image_opacity_effect(){
         $('.item .pin-img-link img').hover(function(){ $(this).stop().animate({ opacity: 0.70 }, "fast"); });
         $('.item .pin-img-link img').mouseout(function(){ $(this).stop().animate({ opacity:1 }, "fast"); });
@@ -175,5 +174,12 @@ $(document).ready(function(){
                 }
             } 
     });
+    $('#fbsharebutton_img').click(function(){
+           FB.ui({
+            method: 'share',
+            href: 'https://developers.facebook.com/docs/',
+          }, function(response){});
+    });
+    function facebook_count_share(){ console.log("here"); }
 });
 
