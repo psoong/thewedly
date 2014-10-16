@@ -164,7 +164,8 @@ $(document).ready(function(){
         reset_events();
         $('img[class=fbsharebutton]').click(function(){
             var sharing = $(this).attr("rel");
-            if($(this).attr("type") == "image"){
+            var type = $(this).attr("type");
+            if(type === "image"){
                 var desc = $(this).attr("desc");
                 FB.ui({
                  method: 'feed',
@@ -181,10 +182,10 @@ $(document).ready(function(){
                     method: 'feed',
                     name: 'The Wedly',
                     link: ajax_url,
-                    source: ($(this).attr("type") === "youtube") ? 'https://www.youtube.com/watch?v='+sharing : 'http://vimeo.com/'+sharing,
-                    picture: '',
+                    source: (type === "youtube") ? 'https://www.youtube.com/watch?v='+sharing : 'http://vimeo.com/'+sharing,
+                    picture: (type === "youtube") ? 'http://img.youtube.com/vi/'+sharing+'/mqdefault.jpg' : ajax_url+'/assets/images/wedly_logo.png',
                     caption: '',
-                    description: ($(this).attr("type") === "youtube") ? 'https://www.youtube.com/watch?v='+sharing : 'http://vimeo.com/'+sharing,
+                    description: (type === "youtube") ? 'https://www.youtube.com/watch?v='+sharing : 'http://vimeo.com/'+sharing,
                     message: ''
                 });
             }
