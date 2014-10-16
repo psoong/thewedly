@@ -193,6 +193,7 @@ $(document).ready(function(){
     });
     $('img[class=fbsharebutton]').click(function(){
            var sharing = $(this).attr("rel");
+           console.log(sharing);
            FB.ui({
             method: 'share',
             href: sharing
