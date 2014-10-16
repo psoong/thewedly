@@ -193,7 +193,6 @@ $(document).ready(function(){
     });
     $('img[class=fbsharebutton]').click(function(){
            var sharing = $(this).attr("rel");
-           console.log(sharing);
            FB.ui({
             method: 'feed',
             name: 'The Wedly',
@@ -201,7 +200,7 @@ $(document).ready(function(){
             source: '',
             picture: sharing,
             caption: '',
-            description: '',
+            description: 'A one-stop shop where you can find not just inspirational ideas,but also the wedding vendors that can make it happen!You will have access to the largest visual directory of wedding vendors in Asia,as well as some pretty awesome wedding planning tools to help you plan that perfect day.',
             message: ''
           }, function(response){ console.log(response); });
     });
