@@ -196,12 +196,12 @@ $(document).ready(function(){
            var desc = $(this).attr("desc");
            FB.ui({
             method: 'feed',
-            name: 'The Wedly',
+            name: desc,
             link: ajax_url,
             source: '',
             picture: sharing,
             caption: '',
-            description: 'A one-stop shop where you can find not just inspirational ideas,but also the wedding vendors that can make it happen!You will have access to the largest visual directory of wedding vendors in Asia,as well as some pretty awesome wedding planning tools to help you plan that perfect day.',
+            description: 'The Wedly is a one-stop shop where you can find not just inspirational ideas,but also the wedding vendors that can make it happen!You will have access to the largest visual directory of wedding vendors in Asia,as well as some pretty awesome wedding planning tools to help you plan that perfect day.',
             message: desc
           }, function(response){ console.log(response); });
     });
