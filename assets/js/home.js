@@ -154,8 +154,15 @@ $(document).ready(function(){
         itemSelector : '.element',
         layoutMode : 'masonry'
     });
+    function reset_events(){
+        $('img[class=fbsharebutton]').unbind("click");
+        $(".pin_ad").unbind("click");
+        $('.item .pin-img-link img').unbind("hover");
+        $('.item .pin-img-link img').unbind("mouseout");
+    }
     function general_js(){
-            $('img[class=fbsharebutton]').click(function(){
+        reset_events();
+        $('img[class=fbsharebutton]').click(function(){
                var sharing = $(this).attr("rel");
                var desc = $(this).attr("desc");
                FB.ui({
@@ -193,13 +200,12 @@ $(document).ready(function(){
                         if(data.response === 1){
                             $('#board').isotope('insert', $(data.content) );
                             $('div#lastPostsLoader').hide();
-                            //image_opacity_effect();
+                            general_js();
                         }else{
                             $('div#lastPostsLoader').hide();
                             $('div#lastPostsLoader_empty').show();
                             setTimeout(function(){$("div#lastPostsLoader_empty").fadeOut()},1000);
                         }
-                        general_js();
                         waiting = false;
                     },'json');
                 }

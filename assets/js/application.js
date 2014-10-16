@@ -160,6 +160,7 @@ function create_mask(){
 }
 function remove_mask(){ $('div[class^=mask]').remove(); }
 function hide_popup(){
+    $("#navigation > li > a").removeClass("active");
     $(".pop_outer > div").hide();
     remove_mask();
 }
@@ -168,16 +169,24 @@ $(".remove").click(function(){ hide_popup(); });
 window.onkeyup = function (event) { if (event.keyCode == 27) { hide_popup(); } }
 
 $(".login_li > a").click(function(){ 
+    create_mask(); 
     $("#navigation > li > a").removeClass("active");
     $(this).addClass("active");
-    create_mask(); 
     $(".pop_outer").show();
     $("#login").show(); 
 });
 $(".register_li > a").click(function(){ 
+    create_mask(); 
     $("#navigation > li > a").removeClass("active");
     $(this).addClass("active");
-    create_mask(); 
     $(".pop_outer").show();
-    $("#register").show(); 
+    $("#register").show();
+});
+$('#flip').click(function(){ 
+    $('#pannel_show_down').toggle();
+    if($('#pannel_show_down').css('display') == 'block'){
+        $('#flip > em').addClass('active');
+    }else{
+        $('#flip > em').removeClass('active');
+    }
 });
