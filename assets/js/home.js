@@ -200,14 +200,6 @@ $(document).ready(function(){
         create_mask();
         $(".pop_outer").show();
         $("#login_first").show();
-    });
-    $(".login_li > a").click(function(){ 
-        create_mask(); 
-        $(".pop_outer").show();
-        $("#login").show(); 
-    });
-    
-    
-    
+    });    
 });
 

@@ -47,7 +47,7 @@ function Login() {
            } else {
                  console.log('User cancelled login or did not fully authorize.');
            }
-         }, {scope: 'email,user_birthday,user_photos,user_hometown,user_location'});
+         }, {scope: 'public_profile,email'});
 };
 $(function(){
     $('.slide-out-div').tabSlideOut({
@@ -166,3 +166,18 @@ function hide_popup(){
 $('.edt_pop_block_inner').bind('clickoutside', function(event) {  hide_popup(); });
 $(".remove").click(function(){ hide_popup(); });
 window.onkeyup = function (event) { if (event.keyCode == 27) { hide_popup(); } }
+
+$(".login_li > a").click(function(){ 
+    $("#navigation > li > a").removeClass("active");
+    $(this).addClass("active");
+    create_mask(); 
+    $(".pop_outer").show();
+    $("#login").show(); 
+});
+$(".register_li > a").click(function(){ 
+    $("#navigation > li > a").removeClass("active");
+    $(this).addClass("active");
+    create_mask(); 
+    $(".pop_outer").show();
+    $("#register").show(); 
+});

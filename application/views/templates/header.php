@@ -75,6 +75,26 @@
  		</div>
  	</div>
     </div>
+    <div class="pop_inner pop_adj_div" id="register">
+        <div class="regist_pop_login_block innr_pop_adjt" id="new_margin_top">
+                <div class="login_block_inner">
+                        <div class="heading_registers">
+                                <div class="img_register"><span class="p_headings">Register</span></div> 
+                                <div class="l_beforeborders"></div> 
+                                <div class="buttons">
+                                        <a href="<?= base_url("Members/genUserSignup") ?>" class="r_c">
+                                            <span class="img"><img alt="" src="<?= base_url("assets/images/user.png") ?>"></span>
+                                                <h3>Register as user</h3> 
+                                        </a>
+                                        <a href="<?= base_url("Members/vendorUserSignup") ?>" class="r_c">
+                                                <span class="img"><img alt="" src="<?= base_url("assets/images/user.png") ?>"></span>
+                                                <h3>Register as Vendor</h3> 
+                                        </a>
+                                </div> 
+                        </div>
+                </div>
+        </div>
+     </div>
 </div>
 <header class="header_main">
 <div class="wrapper">
@@ -93,19 +113,17 @@
 				
 				<div class="header_show">			
 				</div>
-				<div class="align_top_menu">
+				<div class="align_top_menu" id="navigation">
                                     <li class="header_li"> <a href="<?= base_url() ?>" class="active">Browse</a></li>
-					<?php if(false){ //if logged in ?>
-                                            <?php if($this->Session->check('page_active')){ ?>
-                                                    <li  class="user_display"> <a id="user_menu_tab" class="active" href="javascript:void(0)"><?php echo ucfirst($usersDetails['Member']['first_name']);?></a></li>
-                                            <?php } else { ?>
-                                                    <li  class="user_display"> <a id="user_menu_tab" class="active_user_bar" href="javascript:void(0)"><?php echo ucfirst($usersDetails['Member']['first_name']);?></a></li>
-                                            <?php } ?>
-					<?php } ?>
-                                        <!--<li class="register_li"><a href="javascript:void(0)" class="reg active">Register</a><div class="clear"></div></li>-->
-                                        <li class="register_li"><a href="javascript:void(0)" class="reg">Register</a><div class="clear"></div></li>
-                                        <li class="login_li"><a href="javascript:void(0)" class="log">Log In</a></li>
-					
+                                    <?php if(false){ //if logged in ?>
+                                        <?php if($this->Session->check('page_active')){ ?>
+                                                <li  class="user_display"> <a id="user_menu_tab" class="active" href="javascript:void(0)"><?php echo ucfirst($usersDetails['Member']['first_name']);?></a></li>
+                                        <?php } else { ?>
+                                                <li  class="user_display"> <a id="user_menu_tab" class="active_user_bar" href="javascript:void(0)"><?php echo ucfirst($usersDetails['Member']['first_name']);?></a></li>
+                                        <?php } ?>
+                                    <?php } ?>
+                                    <li class="register_li"><a href="javascript:void(0)" class="reg">Register</a><div class="clear"></div></li>
+                                    <li class="login_li"><a href="javascript:void(0)" class="log">Log In</a></li>
 				</div>
 				<li class="selected nt_ryt_brder">
 					<div class="search_menu">
