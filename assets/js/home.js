@@ -1,12 +1,3 @@
-window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '646730485446032',
-    xfbml      : true,
-    status     : true,
-    version    : 'v2.1'
-  });
-};
-
 (function(d, s, id){
    var js, fjs = d.getElementsByTagName(s)[0];
    if (d.getElementById(id)) {return;}
@@ -205,6 +196,18 @@ $(document).ready(function(){
             message: desc
           }, function(response){ console.log(response); });
     });
-    function facebook_count_share(){ console.log("here"); }
+    $(".pin_ad").click(function(){
+        create_mask();
+        $(".pop_outer").show();
+        $("#login_first").show();
+    });
+    $(".login_li > a").click(function(){ 
+        create_mask(); 
+        $(".pop_outer").show();
+        $("#login").show(); 
+    });
+    
+    
+    
 });
 

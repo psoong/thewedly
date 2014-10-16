@@ -31,6 +31,51 @@
 ?>
 </head>
 <body>
+<div class="pop_outer abs_top_log">
+    <div class="pop_inner login_popup" id="login">
+        <div class="regist_pop_login_block_extra popuo_login_block_extra">
+ 		<div class="login_popup_block">
+                     <div class="img_register">
+ 		      <span class="l_headings">Log In</span>
+ 		     </div> 
+			 <div class="login_left_block">
+                             <form name="signin" method="post" id="signinform" action="<?= base_url("signin") ?>">
+                                <!--
+                                <div class="response-msg success ui-corner-all error_div" style="font-size:13px;background: none repeat scroll 0 0 rgba(0, 0, 0, 0);border: medium none; padding-left:0px;">
+                                    This is success
+                                </div>
+                                <div class="response-msg error ui-corner-all error_div"  style="font-size:13px; background: none repeat scroll 0 0 rgba(0, 0, 0, 0);border: medium none; padding-left:0px;">
+                                    This is error
+                                </div>
+                                -->
+				<div class="login_row">
+				    <label>Email address</label> 
+	 				<input type="text" class="required_email1 email" name="data[Member][email]" /></input>
+	 			</div>
+	 			<div class="login_row">
+				    <label>Password</label>  
+	 				<input type="password" id="password" class="required_password" name="data[Member][password]"></input>
+	 			</div>
+ 				<div class="btn_block">
+					<input type="hidden" name="data[Member][vendor_message]" class="vendor_message" value=""/>
+ 					<input  class="login_btn" type="Submit" value="Log In">
+				</div>
+				</form>
+ 			</div>
+ 			<img src="<?= base_url("assets/images/divid.png") ?>" class="divide_img"></img>
+ 			<div class="login_left_block">
+	 			<div class="social_block">
+	 				<a href="javascript:void(0)" class="fb" id="fb-login" onclick="Login();"></a>
+	 				<a href="javascript:void(0)" class="google" onclick="student_google_login();"></a>
+	 				<a href="javascript:void(0)" class="pintrest yahooLg"></a>
+	 			</div>
+ 			</div>
+ 			<div class="membr_div">Not a Member Yet? <a href="javascript:void(0)" id="r_click">Register Here!</a></div>
+ 			<div class="membr_div"><a href="javascript:void(0)" id="forgotpass" >Forgotten Your Password?</a></div>
+ 		</div>
+ 	</div>
+    </div>
+</div>
 <header class="header_main">
 <div class="wrapper">
         <div class="header_gap"></div>

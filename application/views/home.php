@@ -1,3 +1,18 @@
+<div class="pop_outer">
+    <div class="pop_inner log_block_width margin_adjust"  id="login_first">
+        <div class="login_block log_block_width z_space main_ab_cntr">
+            <div class="edt_pop_block_inner">
+                    <div class="head_block_width rec_g">
+                            <h2 class="login_heading jne_lbek"><label>To add photos to an album, you will first need to login as a registered user</label></h2>
+                    </div>
+
+                    <div class="cover_bottom_block head_block_width adj_wdh_delne">
+                            <input type="submit" value="OK" class="remove">
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="bottom_container">
     <div class="pin_bodi toggle toggle_margin_top" accesskey="">
         <div id="board_main">
@@ -14,7 +29,7 @@
                                 <a href="javascript:void(0)" class="pin-img-link">
                                     <img class="large_image" src="<?= base_url("assets/images/portfolio/search/".$row->image) ?>" alt="" width="236" height="<?= $row->image_height ?>" />
                                     <div class="isptop_social">
-                                        <a hreflang="<?= $row->member_id ?>" href="javascript:void(0)" title="Add to Album" rel='<?= $row->id ?>' class="pin_ad"><img class="so_add_img" src="<?= base_url("assets/images/add_grey.png") ?>"></a>
+                                        <a hreflang="<?= $row->member_id ?>" logged_in="no" href="javascript:void(0)" title="Add to Album" rel='<?= $row->id ?>' class="pin_ad"><img class="so_add_img" src="<?= base_url("assets/images/add_grey.png") ?>"></a>
                                         <a href="javascript:void(0)"><img src="<?= base_url("assets/images/facebook_grey.png") ?>"  rel="<?= base_url("assets/images/portfolio/search/".$row->image) ?>" class="fbsharebutton" id="fbsharebutton_img" desc="<?php echo ucwords($member->business_name);?>" /><a>
                                         <a rel="<?= $row->member_id ?>"  class="goog_p_c" href="https://plus.google.com/share?url=<?= base_url("assets/images/portfolio/search/".$row->image) ?>" title="Google+"  onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;"><img class="so_google_img" src="<?= base_url("assets/images/google_grey.png") ?>"></a>
                                         <a  rel="<?= $row->member_id ?>" class="pint_p_c" href="//pinterest.com/pin/create/button/?media=<?= base_url("assets/images/portfolio/search/".$row->image) ?>&description=<?=$pin_to?>&url=<?= base_url() ?>" title="Pinterest" target="_blank" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;"><img class="so_pint_img" src="<?= base_url("assets/images/pinterest_grey.png") ?>"></a>

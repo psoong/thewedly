@@ -28,8 +28,8 @@
 <?php endif; ?>
 <?php 
     $response_type1 = "code";
-    $client_id1 = "38789626348.apps.googleusercontent.com";
-    $redirect_uri1 = "http://jupiter1.promaticstechnologies.com/wedding/Homes/user_google_login";
+    $client_id1     = "38789626348.apps.googleusercontent.com";
+    $redirect_uri1  = base_url("google_login");
 
     $scope1 = "https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile";
     $state1 = "access";
@@ -38,61 +38,10 @@
 function student_google_login(){
     window.open("https://accounts.google.com/o/oauth2/auth?response_type=<?php echo $response_type1;?>&client_id=<?php echo $client_id1;?>&redirect_uri=<?php echo $redirect_uri1;?>&scope=<?php echo $scope1;?>&state=<?php echo $state1;?>", height = 600, width = 400)
 }
-/*FB.init({ 
-        appId:'<?php echo '603609636351597';?>', cookie:true, 
-        status:true, xfbml:true 
- });
-
-FB.getLoginStatus(function(response) {
-  });
-
-function faceLogin(){
-         FB.login(function(response) {
-           if (response.authResponse) {
-                 FB.api('/me', function(response) {
-                        $('input[id=facebook_login_fb]').val(response['id']);
-                        $('#fb_login_form').submit();
-                 });
-           } else {
-                 console.log('User cancelled login or did not fully authorize.');
-           }
-         }, {scope: 'email,user_photos'}); 	
-};
-function Login() {
-        FB.login(function(response) {
-           if (response.authResponse) {
-                 FB.api('/me', function(response) {
-                        var str;
-                        str = response['id'] + ";\n" +
-                        response['name'] + ";\n" +
-                        response['first_name'] + ";\n" +
-                        response['last_name'] + ";\n" +
-                        response['birthday'] + ";\n" +
-                        response['gender'] + ";\n" +
-                        response['username'] + ";\n" +
-                        response['phone'] + ";\n" +
-                        response['email'];
-                        $('input[id=full_name]').val(response['name']);
-                        $('input[id=first_name_fb]').val(response['first_name']);
-                        $('input[id=last_name_fb]').val(response['last_name']);
-                        $('input[id=email_fb]').val(response['email']);
-                        $('input[id=facebook_id_fb]').val(response['id']);
-
-                        if(response['hometown']!=undefined)
-                        {
-                                $('input[id=hometown]').val(response['hometown']['name']);
-                        }
-                        $('#fb_registration_form').submit();
-                 });
-           } else {
-                 console.log('User cancelled login or did not fully authorize.');
-           }
-         }, {scope: 'email,user_birthday,user_photos,user_hometown,user_location'});
-};*/
 </script>
-<!--
+
 <div id="fb-root"></div>
-<script src="http://connect.facebook.net/en_US/all.js#appId=<?php echo '603609636351597';?>"></script>
+<script src="http://connect.facebook.net/en_US/all.js#appId=<?php echo '646730485446032';?>"></script>
 <div style="display:none;">
     <form id="fb_registration_form"  action="<?= base_url('Members/facebookRegister') ?>" method="post">
             <input type="text" name="data[Member][email]" id="email_fb" value="" />
@@ -103,7 +52,7 @@ function Login() {
             <input type="text" name="data[Member][hometown]" id="hometown" value="" />
     </form>
 </div>
--->
+
 <form id="feedback_data" action="<?= base_url("Members/saveFeedbackData") ?>" method="post" enctype="multipart/form-data">
     <div class="feedbackpopup12" style="display:none;">
             <div class="loader_status">
