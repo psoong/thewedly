@@ -194,11 +194,8 @@ $(document).ready(function(){
     $('img[class=fbsharebutton]').click(function(){
            var sharing = $(this).attr("rel");
            FB.ui({
-            method: 'share_open_graph',
-            action_type: 'og.likes',
-            action_properties: JSON.stringify({
-                object: sharing,
-            })
+            method: 'share',
+            href: sharing
           }, function(response){ console.log(response); });
     });
     function facebook_count_share(){ console.log("here"); }
