@@ -13,7 +13,7 @@ class Ajax extends CI_Controller {
 	{
             $this->load->model('Portfolio', '', TRUE);
             $this->load->model('Member', '', TRUE);
-            $data['portfolio']  = $portfolio = $this->Portfolio->load_portfolio(($page-1)*10);
+            $data['portfolio']  = $portfolio = $this->Portfolio->load_portfolio(($page-1)*15);
             $response = ($portfolio->num_rows())? 1 : 0;
             $content = ($portfolio->num_rows())?  $this->load->view('ajax/load_browse',$data,true) : '';
             echo json_encode(array('response'=>$response,'content'=>$content));

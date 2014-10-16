@@ -44,12 +44,7 @@
                                     <?php if($row->pin_type == "video"): ?>
                                         <?php $vid_arr = explode("=", $row->video); ?>
                                         <?php if(strstr($row->video,"youtube.com")): ?>
-                                            <object width="236" height="250">
-                                                <param name="movie" value="http://www.youtube.com/v/<?=$vid_arr[1]?>?hl=en_US&amp;version=3"></param>
-                                                <param name="allowFullScreen" value="true"></param>
-                                                <param name="allowscriptaccess" value="always"></param>
-                                                <embed src="http://www.youtube.com/v/<?=$vid_arr[1]?>?hl=en_US&version=3" type="application/x-shockwave-flash" width="236" height="250" allowscriptaccess="always" allowfullscreen="true"></embed>
-                                            </object>
+                                            <iframe width="236" height="250" src="http://www.youtube.com/embed/<?=$vid_arr[1]?>" frameborder="0" allowfullscreen></iframe>
                                         <?php elseif(strstr($row->video,"vimeo.com")): ?>
                                                 <iframe src="//player.vimeo.com/video/<?= $vid_arr[1] ?>" width="236" height="250" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                                         <?php endif; ?>

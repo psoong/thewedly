@@ -8,7 +8,7 @@ class Portfolio extends CI_Model {
     }
     
     function load_portfolio($offset=0){
-        return $this->db->get_where('portfolios', array('status'=>1,'admin_approval'=>1), 14, $offset);
+        return $this->db->get_where('portfolios', array('status'=>1,'admin_approval'=>1), 15, $offset);
     }
 }
 
