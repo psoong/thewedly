@@ -154,11 +154,33 @@ $(document).ready(function(){
         itemSelector : '.element',
         layoutMode : 'masonry'
     });
-    function image_opacity_effect(){
-        $('.item .pin-img-link img').hover(function(){ $(this).stop().animate({ opacity: 0.70 }, "fast"); });
-        $('.item .pin-img-link img').mouseout(function(){ $(this).stop().animate({ opacity:1 }, "fast"); });
+    function general_js(){
+            $('img[class=fbsharebutton]').click(function(){
+               var sharing = $(this).attr("rel");
+               var desc = $(this).attr("desc");
+               FB.ui({
+                method: 'feed',
+                name: desc,
+                link: ajax_url,
+                source: '',
+                picture: sharing,
+                caption: '',
+                description: 'The Wedly is a one-stop shop where you can find not just inspirational ideas,but also the wedding vendors that can make it happen!You will have access to the largest visual directory of wedding vendors in Asia,as well as some pretty awesome wedding planning tools to help you plan that perfect day.',
+                message: desc
+              }, function(response){ console.log(response); });
+        });
+        $(".pin_ad").click(function(){
+            create_mask();
+            $(".pop_outer").show();
+            $("#login_first").show();
+        });
+        function image_opacity_effect(){
+            $('.item .pin-img-link img').hover(function(){ $(this).stop().animate({ opacity: 0.70 }, "fast"); });
+            $('.item .pin-img-link img').mouseout(function(){ $(this).stop().animate({ opacity:1 }, "fast"); });
+        }
+        image_opacity_effect();
     }
-    image_opacity_effect();
+    general_js();
     var waiting = false;
     var page = 1;
     $(window).scroll(function(){
@@ -171,35 +193,17 @@ $(document).ready(function(){
                         if(data.response === 1){
                             $('#board').isotope('insert', $(data.content) );
                             $('div#lastPostsLoader').hide();
-                            image_opacity_effect();
+                            //image_opacity_effect();
                         }else{
                             $('div#lastPostsLoader').hide();
                             $('div#lastPostsLoader_empty').show();
                             setTimeout(function(){$("div#lastPostsLoader_empty").fadeOut()},1000);
                         }
+                        general_js();
                         waiting = false;
                     },'json');
                 }
             } 
-    });
-    $('img[class=fbsharebutton]').click(function(){
-           var sharing = $(this).attr("rel");
-           var desc = $(this).attr("desc");
-           FB.ui({
-            method: 'feed',
-            name: desc,
-            link: ajax_url,
-            source: '',
-            picture: sharing,
-            caption: '',
-            description: 'The Wedly is a one-stop shop where you can find not just inspirational ideas,but also the wedding vendors that can make it happen!You will have access to the largest visual directory of wedding vendors in Asia,as well as some pretty awesome wedding planning tools to help you plan that perfect day.',
-            message: desc
-          }, function(response){ console.log(response); });
-    });
-    $(".pin_ad").click(function(){
-        create_mask();
-        $(".pop_outer").show();
-        $("#login_first").show();
     });    
 });
 
