@@ -163,18 +163,31 @@ $(document).ready(function(){
     function general_js(){
         reset_events();
         $('img[class=fbsharebutton]').click(function(){
-               var sharing = $(this).attr("rel");
-               var desc = $(this).attr("desc");
-               FB.ui({
-                method: 'feed',
-                name: desc,
-                link: ajax_url,
-                source: '',
-                picture: sharing,
-                caption: '',
-                description: 'The Wedly is a one-stop shop where you can find not just inspirational ideas,but also the wedding vendors that can make it happen!You will have access to the largest visual directory of wedding vendors in Asia,as well as some pretty awesome wedding planning tools to help you plan that perfect day.',
-                message: desc
-              }, function(response){ console.log(response); });
+            var sharing = $(this).attr("rel");
+            if($(this).attr("type") == "image"){
+                var desc = $(this).attr("desc");
+                FB.ui({
+                 method: 'feed',
+                 name: desc,
+                 link: ajax_url,
+                 source: '',
+                 picture: sharing,
+                 caption: '',
+                 description: 'The Wedly is a one-stop shop where you can find not just inspirational ideas,but also the wedding vendors that can make it happen!You will have access to the largest visual directory of wedding vendors in Asia,as well as some pretty awesome wedding planning tools to help you plan that perfect day.',
+                 message: desc
+               }, function(response){ console.log(response); });
+            }else{
+                FB.ui({
+                    method: 'feed',
+                    name: 'The Wedly',
+                    link: ajax_url,
+                    source: ($(this).attr("type") === "youtube") ? 'https://www.youtube.com/watch?v='+sharing : 'http://vimeo.com/'+sharing,
+                    picture: '',
+                    caption: '',
+                    description: ($(this).attr("type") === "youtube") ? 'https://www.youtube.com/watch?v='+sharing : 'http://vimeo.com/'+sharing,
+                    message: ''
+                });
+            }
         });
         $(".pin_ad").click(function(){
             create_mask();
