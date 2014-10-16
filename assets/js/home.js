@@ -195,8 +195,14 @@ $(document).ready(function(){
            var sharing = $(this).attr("rel");
            console.log(sharing);
            FB.ui({
-            method: 'share',
-            href: sharing
+            method: 'feed',
+            name: 'The Wedly',
+            link: ajax_url,
+            source: '',
+            picture: sharing,
+            caption: '',
+            description: '',
+            message: ''
           }, function(response){ console.log(response); });
     });
     function facebook_count_share(){ console.log("here"); }
