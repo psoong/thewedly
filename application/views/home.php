@@ -26,7 +26,7 @@
                         $pin_to = (!empty($member->title) && !empty($member->country_name))? $member->title . ' in '. $member->country_name : $member->title;
                         switch($row->pin_type){
                             case "image":
-                                $div_attrs = 'class="item" style="width:236px;height:'.($row->image_height+48).'"';
+                                $div_attrs = 'class="item" style="width:236px;height:'.($row->image_height+48).'px;"';
                             break;
                             case "video":
                                 $div_attrs = 'class="item" style="width:236px; height:300px;"';
@@ -42,10 +42,11 @@
                             <div class="zoom_outers" rel="<?= $row->id ?>">
                                 <a href="javascript:void(0)" class="pin-img-link">
                                     <?php if($row->pin_type == "video"): ?>
-                                        <?php $vid_arr = explode("=", $row->video); ?>
                                         <?php if(strstr($row->video,"youtube.com")): ?>
+                                            <?php $vid_arr = explode("=", $row->video); ?>
                                             <iframe width="236" height="250" src="http://www.youtube.com/embed/<?=$vid_arr[1]?>" frameborder="0" allowfullscreen></iframe>
                                         <?php elseif(strstr($row->video,"vimeo.com")): ?>
+                                                <?php $vid_arr = explode("/", $row->video); ?>
                                                 <iframe src="//player.vimeo.com/video/<?= $vid_arr[1] ?>" width="236" height="250" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                                         <?php endif; ?>
                                     <?php elseif($row->pin_type == "audio"): ?>
